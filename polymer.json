@@ -1,0 +1,43 @@
+{
+    "entrypoint": "index.html",
+    "npm": true,
+    "moduleResolution": "node",
+    "license": "MIT",
+    "fragments": [
+      "src/head-navigation.js",
+      "src/foot-controls.js",
+      "src/four-square.js",
+      "src/one-square.js",
+      "src/square-space.js"
+    ],
+  
+    "sources": [
+      "src/**"
+    ],
+  
+    "extraDependencies": [
+      "node_modules/@webcomponents/webcomponentsjs/*.js",
+      "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+      "manifest.json",
+      "package.json",
+      "robots.txt"
+    ],
+
+    "lint": {
+      "rules": [ "polymer-3" ]
+    },
+
+  "builds": [
+    {
+      "name": "esm-bundled",
+      "browserCapabilities": [ "es2015", "modules" ],
+      "js":     { "minify": true },
+      "css":    { "minify": true },
+      "html":   { "minify": true },
+      "bundle": { "inlineScripts": false },
+      "addServiceWorker": true
+    }
+  ]
+
+  }
+  
