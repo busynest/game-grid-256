@@ -22,17 +22,63 @@
     }
 
     .box {
-
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 100%; /* 16:9 */
+      position: relative;
     }
 
     .grid {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
       height: 100%;
       width: 100%;
-      
+      max-width: 800px;
+      max-height: 800px;
       display: grid;
       grid-template-columns:    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows:       1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
+
+/*
+
+    .box {
+      
+      overflow: hidden;
+  height: 0;
+  padding-bottom: 100%; /* 16:9 
+  position: relative;
+ 
+    }
+
+
+
+    .grid {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      -webkit-transform:    translateX(-50%);
+			        transform:    translateX(-50%);
+	            transition:   transform 300ms linear;
+              will-change:  transform;
+
+padding-top: calc(591.44 / 1127.34 * 100%);
+.content{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+*/
+    
 
     square-space {
       position:   absolute;
@@ -41,7 +87,7 @@
 
   </style>
 
-  <script>
+<script>
     //var x = document.getElementById('grid');
     //var y = document.getElementById('grid');
     //x = .setAttribute("style", "margin: ;");
@@ -49,10 +95,41 @@
         //this.$.sv.setAttribute("style", "transform: scale(.5,.5);");
     //this.$.sv.setAttribute("width", "200");
     //this.$.sv.setAttribute("height", "200");
+    /*
+    var grid        = document.getElementById("#grid");
+    var elHeight    = grid.offsetHeight();
+    var elWidth     = grid.width();
+    var wrapper     = document.getElementById("#box");
+    wrapper.resizable({ resize: doResize });
+
+    function doResize(event, ui) {
+  
+    var scale, origin;
+    
+    scale = Math.min(
+      ui.size.width / elWidth,    
+      ui.size.height / elHeight
+    );
+  
+    grid.css({
+      transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+    });
+  
+  }
+
+  var starterData = { 
+    size: {
+      width: wrapper.width(),
+      height: wrapper.height()
+    }
+  }
+  doResize(null, starterData);
+
     //var scale = Math.min( 
     //  availableWidth / contentWidth, 
     //  availableHeight / contentHeight 
     //);
+    */
   </script>
 
 </head>
@@ -339,6 +416,7 @@
 
         <!-- FOOTER -->
         <foot-controls></foot-controls>
+
 
 </body>
 </html>

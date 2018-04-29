@@ -53,6 +53,7 @@ export class FourSquare extends PolymerElement {
     super.ready();
     this.widthBox = parseInt(this.shadowRoot.querySelector('.white').style.width);
    //this.width = FSwidth.width();
+   this.$.green.setAttribute("width", "20px");
   }
 
   static get template() {
@@ -60,7 +61,7 @@ export class FourSquare extends PolymerElement {
 
     	<style>
 
-    		.green {
+    		#green {
     			background-color: rgb(118,150,86);
     		}
 
@@ -91,7 +92,7 @@ export class FourSquare extends PolymerElement {
                     
           <slot height="100%" width="100%"></slot>
           
-          <one-square class="green">  </one-square>
+          <one-square id="green">  </one-square>
           <one-square class="white">  </one-square>
           <one-square class="orange"> </one-square>
           <one-square class="pink">   </one-square>

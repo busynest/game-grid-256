@@ -2,7 +2,17 @@
 
 Element Layout
 
-  Install package.json: npm install
+  # Install Dependencies from package.json:
+    $ npm install
+  
+  # Build Project from polymer.json:
+    $ polymer build
+
+  # Serve Project:
+    $ polymer serve
+
+  # Analyze Project:
+    $ polymer Analyze
 
   Header: 64px: <\head-navigation>
   Footer: 64px: <\foot-controls>
@@ -100,9 +110,9 @@ Element Layout
   git init
   git add README.md
   git commit -m "first commit"
-  git remote add origin https://github.com/busynest/project.git
+  git remote add origin https://github.com/user/project.git
   git push -u origin master
 
   …or push an existing repository from the command line
-  git remote add origin https://github.com/busynest/project.git
+  git remote add origin https://github.com/user/project.git
   git push -u origin master
