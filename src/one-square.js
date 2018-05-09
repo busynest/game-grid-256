@@ -51,14 +51,19 @@ export class OneSquare extends PolymerElement {
 
   connectedCallback() {
     super.connectedCallback();
+
   }
 
   ready() {
     super.ready();
     //Create Block on Double Tap
-    this.addEventListener('click', e => this.handleClick(e).delay);
+    //this.addEventListener('click', e => this.handleClick(e).delay);
+
     //this.ensureAttribue('tabIndex', 0);
     //this.$.box.setAttribute("width", "20px");
+    //const z             = document.getElementsByClassName("box");
+    //this.$.box.setAttribute("width", `${z}`);
+    //console.log("height:" + z);
   }
 
   static get template() {
@@ -88,7 +93,7 @@ export class OneSquare extends PolymerElement {
         }
     	</style>
 	
-			<div pressed class="box" onclick="[[toggleThis]]"></div>
+			<div pressed id="box" onclick="[[toggleThis]]"></div>
 
       `
   }

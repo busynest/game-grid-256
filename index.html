@@ -22,18 +22,12 @@
     }
 
     .box {
-      overflow: hidden;
-      height: 0;
-      padding-bottom: 100%; /* 16:9 */
-      position: relative;
+
     }
 
     .grid {
 
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
+
 
       height: 100%;
       width: 100%;
@@ -45,6 +39,16 @@
     }
 
 /*
+
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 100%; 
+      position: relative;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
 
     .box {
       
@@ -87,6 +91,21 @@ padding-top: calc(591.44 / 1127.34 * 100%);
 
   </style>
 
+
+<script>
+
+    const screen        = window.screen.availHeight;
+    const x             = window.outerHeight;
+    const y             = window.outerWidth;
+    const div             = document.getElementById("grid").outerHeight;
+    console.log(div, "height:" + x, "width:" + y );
+    var grid          = document.getElementById("grid");
+    //grid.setAttribute("style", "grid-template-rows: 1fr;");
+    //var style = window.getComputedStyle(grid, null).getPropertyValue("height");
+    //console.log(style);
+</script>
+
+
 <script>
     //var x = document.getElementById('grid');
     //var y = document.getElementById('grid');
@@ -95,13 +114,14 @@ padding-top: calc(591.44 / 1127.34 * 100%);
         //this.$.sv.setAttribute("style", "transform: scale(.5,.5);");
     //this.$.sv.setAttribute("width", "200");
     //this.$.sv.setAttribute("height", "200");
-    /*
-    var grid        = document.getElementById("#grid");
-    var elHeight    = grid.offsetHeight();
-    var elWidth     = grid.width();
-    var wrapper     = document.getElementById("#box");
-    wrapper.resizable({ resize: doResize });
+    
+    //var grid        = document.getElementById("grid");
+    //var elHeight    = grid.clientHeight();
+    //var elWidth     = grid.offsetWidth();
+    //var wrapper     = document.getElementById("#box");
 
+    //wrapper.resizable({ resize: doResize });
+/*
     function doResize(event, ui) {
   
     var scale, origin;
@@ -140,7 +160,7 @@ padding-top: calc(591.44 / 1127.34 * 100%);
 <script type="module" src="./src/one-square.js"       async></script>
 <script type="module" src="./src/four-square.js"      async></script>
 
-<body class= "site">
+<body class="site">
 
     <!-- HEADER -->
     <head-navigation></head-navigation>

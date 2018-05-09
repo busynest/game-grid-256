@@ -51,9 +51,9 @@ export class FourSquare extends PolymerElement {
 
   ready() {
     super.ready();
-    this.widthBox = parseInt(this.shadowRoot.querySelector('.white').style.width);
-   //this.width = FSwidth.width();
-   this.$.green.setAttribute("width", "20px");
+    //this.widthBox = parseInt(this.shadowRoot.querySelector('.white').style.width);
+    //this.width = FSwidth.width();
+    //this.$.green.setAttribute("width", "20px");
   }
 
   static get template() {
